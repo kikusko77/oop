@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ChristianKu\\.nuget\\packages\\": {},
+    "C:\\Users\\chris\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ChristianKu\\source\\repos\\cv5\\cv5\\cv5.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\Desktop\\vut\\oop\\cv5\\oop\\cv5\\cv5\\cv5.csproj",
       "projectName": "cv5",
-      "projectPath": "C:\\Users\\ChristianKu\\source\\repos\\cv5\\cv5\\cv5.csproj",
-      "packagesPath": "C:\\Users\\ChristianKu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ChristianKu\\source\\repos\\cv5\\cv5\\obj\\",
+      "projectPath": "C:\\Users\\chris\\Desktop\\vut\\oop\\cv5\\oop\\cv5\\cv5\\cv5.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chris\\Desktop\\vut\\oop\\cv5\\oop\\cv5\\cv5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ChristianKu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
