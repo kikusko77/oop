@@ -18,15 +18,15 @@
                                   "/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="1" Grid.Column="0" Content="Add" Width="90" Height="40" VerticalAlignment="Top" Margin="0,10,0,0"/>
-            <Button Grid.Row="1" Content="Edit" Width="90" Height="40" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <Button Grid.Row="1" Content="Export" Width="90" Height="40" VerticalAlignment="Top" Margin="0,110,0,0"/>
-            <Button Grid.Row="1" Content="Import" Width="90" Height="40" VerticalAlignment="Top" Margin="0,160,0,0"/>
+            <Button Name="Add"  Grid.Row="1" Grid.Column="0" Content="Add" Width="90" Height="40" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            <Button Name="Edit" Grid.Row="1" Content="Edit" Width="90" Height="40" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <Button Name="Export" Grid.Row="1" Content="Export" Width="90" Height="40" VerticalAlignment="Top" Margin="0,110,0,0"/>
+            <Button Name="Import" Grid.Row="1" Content="Import" Width="90" Height="40" VerticalAlignment="Top" Margin="0,160,0,0"/>
 
-            <DataGrid Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            <DataGrid Name="DatabaseView" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         </Grid>
 
-        <TextBox Grid.Row="0" TextWrapping="Wrap" Text="Search" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Margin="110,0,0,0"/>
+        <TextBox Name="SaerchBox" Grid.Row="0" TextWrapping="Wrap" Text="Search" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Margin="110,0,0,0"/>
 
     </Grid>
 </Window>
