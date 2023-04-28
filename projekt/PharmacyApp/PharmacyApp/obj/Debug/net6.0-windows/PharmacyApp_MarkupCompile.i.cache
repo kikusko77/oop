@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\App.xaml
-11407045341
+2-2000197958
 
-10-1439569792
+11-713813187
 2221137073384
-MainWindow.xaml;
+AddEditWindow.xaml;MainWindow.xaml;
 
 True
 
