@@ -15,7 +15,7 @@ namespace PharmacyApp.EFCore
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ChristianKu\Desktop\OopProjekt\oop\projekt\PharmacyApp\PharmacyApp\DrugDatabase.mdf;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\DrugDatabase.mdf; Connect Timeout=30");
 
             }
         }
@@ -27,8 +27,8 @@ namespace PharmacyApp.EFCore
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Brand).IsRequired().HasMaxLength(50);
                 entity.Property(e => e.Manufacturer).IsRequired().HasMaxLength(50);
-                entity.Property(e => e.Quantity).IsRequired();
-                entity.Property(e => e.Price).IsRequired();
+                entity.Property(e => e.Quantity).IsRequired().HasDefaultValue(0);
+                entity.Property(e => e.Price).IsRequired().HasDefaultValue(0).HasColumnType("decimal(18,2)");
             });
         }
     }

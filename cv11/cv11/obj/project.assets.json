@@ -3509,24 +3509,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ChristianKu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\marek\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\cv11\\cv11\\cv11.csproj",
+      "projectUniqueName": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv11\\cv11\\cv11.csproj",
       "projectName": "cv11",
-      "projectPath": "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\cv11\\cv11\\cv11.csproj",
-      "packagesPath": "C:\\Users\\ChristianKu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\cv11\\cv11\\obj\\",
+      "projectPath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv11\\cv11\\cv11.csproj",
+      "packagesPath": "C:\\Users\\marek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv11\\cv11\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ChristianKu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\marek\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3534,7 +3529,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
