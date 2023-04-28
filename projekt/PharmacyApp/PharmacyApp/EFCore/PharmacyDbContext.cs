@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CsvHelper;
+using System.Globalization;
+using System.IO;
 
 namespace PharmacyApp.EFCore
 {
@@ -60,5 +63,32 @@ namespace PharmacyApp.EFCore
                 context.SaveChanges();
             }
         }
+        public void ImportFromCsv(PharmacyDbContext context, string filePath)
+        {
+            using (var reader = new StreamReader(filePath))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var drugs = csv.GetRecords<Drugs>().ToList();
+                foreach (var drug in drugs)
+                {
+                    if (!context.drugs.Any(s => s.Id == drug.Id))
+                    {
+                        context.drugs.Add(drug);
+                    }
+                }
+                context.SaveChanges();
+            }
+        }
+
+        public void ExportToCsv(PharmacyDbContext context, string filePath)
+        {
+            using (var writer = new StreamWriter(filePath))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                var drugs = context.drugs.ToList();
+                csv.WriteRecords(drugs);
+            }
+        }
+
     }
 }
