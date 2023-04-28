@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\obj\Debug\net6.0-windows\
+=======
+C:\Users\ChristianKu\Desktop\OopProjekt\oop\projekt\PharmacyApp\PharmacyApp\obj\Debug\net6.0-windows\
+>>>>>>> 4265ef27fc651abfafbd5e5c4f01ef59462b2051
 PharmacyApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+<<<<<<< HEAD
 C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\App.xaml
 11407045341
 
 8-1465975338
 2221137073384
+=======
+C:\Users\ChristianKu\Desktop\OopProjekt\oop\projekt\PharmacyApp\PharmacyApp\App.xaml
+11407045341
+
+51279524786
+222-2060601690
+>>>>>>> 4265ef27fc651abfafbd5e5c4f01ef59462b2051
 MainWindow.xaml;
 
 False
