@@ -31,5 +31,34 @@ namespace PharmacyApp.EFCore
                 entity.Property(e => e.Price).IsRequired().HasDefaultValue(0).HasColumnType("decimal(18,2)");
             });
         }
+
+        public Drugs[] getAllDrugs(PharmacyDbContext context)
+        {
+            return context.drugs.ToArray();
+        }
+
+        public void addDrug(PharmacyDbContext context, int id, string name, string brand, string manufacturer, decimal price, int quantity)
+        {
+            if (!context.drugs.Any(s => s.Id == id))
+            {
+                context.drugs.Add(new Drugs() { Id = id, Name = name, Brand = brand, Manufacturer = manufacturer, Price = price, Quantity = quantity});
+            }
+        }
+
+        public void editDrug(PharmacyDbContext context, int id, string name, string brand, string manufacturer, decimal price, int quantity)
+        {
+            var drug = context.drugs.Find(id);
+            if (drug != null)
+            {
+                drug.Name = name;
+                drug.Brand = brand;
+                drug.Manufacturer = manufacturer;
+                drug.Price = price;
+                drug.Quantity = quantity;
+
+                context.drugs.Update(drug);
+                context.SaveChanges();
+            }
+        }
     }
 }
