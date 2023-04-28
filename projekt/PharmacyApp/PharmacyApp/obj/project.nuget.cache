@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "prclOR+oaDhlzUK4VCwAXEuLjLxLL15lhwW1TKzdIh/Eu+4ZG+dYmSaxwOfCl7xbmcSG4gStQf+RDuwF0k+slQ==",
+  "dgSpecHash": "q1E8sGIzXU8CVTRiw+OlyAw0E51xgmbkzbFG8jQpsrTo3u/O6h6/FXgJiTDGhpJxZ3fUNRLNvwMu61iKxiU+Fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marek\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\marek\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\marek\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\marek\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\marek\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\marek\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
