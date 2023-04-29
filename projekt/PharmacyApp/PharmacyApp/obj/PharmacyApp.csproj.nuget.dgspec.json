@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marek\\Documents\\C# projects\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj": {}
+    "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marek\\Documents\\C# projects\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj": {
+    "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marek\\Documents\\C# projects\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
+        "projectUniqueName": "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
         "projectName": "PharmacyApp",
-        "projectPath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
-        "packagesPath": "C:\\Users\\marek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\projekt\\PharmacyApp\\PharmacyApp\\obj\\",
+        "projectPath": "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\projekt\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
+        "packagesPath": "C:\\Users\\ChristianKu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ChristianKu\\Desktop\\OopProjekt\\oop\\projekt\\PharmacyApp\\PharmacyApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ChristianKu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
