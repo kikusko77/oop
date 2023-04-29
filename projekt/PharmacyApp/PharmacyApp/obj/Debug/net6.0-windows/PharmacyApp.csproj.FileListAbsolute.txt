@@ -131,3 +131,6 @@ C:\Users\ChristianKu\Desktop\OopProjekt\oop\projekt\PharmacyApp\PharmacyApp\obj\
 C:\Users\ChristianKu\Desktop\OopProjekt\oop\projekt\PharmacyApp\PharmacyApp\obj\Debug\net6.0-windows\PharmacyApp.genruntimeconfig.cache
 C:\Users\ChristianKu\Desktop\OopProjekt\oop\projekt\PharmacyApp\PharmacyApp\obj\Debug\net6.0-windows\ref\PharmacyApp.dll
 >>>>>>> 4265ef27fc651abfafbd5e5c4f01ef59462b2051
+C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\bin\Debug\net6.0-windows\CsvHelper.dll
+C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\obj\Debug\net6.0-windows\AddEditWindow.g.cs
+C:\Users\marek\Documents\C# projects\oop\projekt\PharmacyApp\PharmacyApp\obj\Debug\net6.0-windows\AddEditWindow.baml
