@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -28,11 +29,14 @@ namespace PharmacyApp
             Drugs[] DrugDatabase;
             using (var context = new PharmacyDbContext())
             {
+
                 DrugDatabase = context.getAllDrugs(context);
             }
 
-            DatabaseView.Items.Add(DrugDatabase);
-            
+            foreach (var drug in DrugDatabase)
+            {
+                DatabaseView.Items.Add(drug);
+            }
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
