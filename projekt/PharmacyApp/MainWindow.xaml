@@ -24,7 +24,7 @@
             <Button Name="Export" Click="Export_Click" Grid.Row="1" Content="Export" Width="90" Height="40" VerticalAlignment="Top" Margin="0,110,0,0"/>
             <Button Name="Import" Click="Import_Click" Grid.Row="1" Content="Import" Width="90" Height="40" VerticalAlignment="Top" Margin="0,160,0,0"/>
 
-            <DataGrid Name="DatabaseView" Grid.Column="1" ItemsSource="{Binding DrugDatabase}">
+            <DataGrid Name="DatabaseView" Grid.Column="1">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Background" Value="LightGray"/>
@@ -36,12 +36,12 @@
                 </DataGrid.Resources>
                 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Width="50"/>
-                    <DataGridTextColumn Header="Name" Width="*"/>
-                    <DataGridTextColumn Header="Brand" Width="*"/>
-                    <DataGridTextColumn Header="Manufacturer" Width="*"/>
-                    <DataGridTextColumn Header="Price" Width="50"/>
-                    <DataGridTextColumn Header="Quantity" Width="60"/>
+                    <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="50"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Brand}" Header="Brand" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Manufacturer}" Header="Manufacturer" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Price}" Header="Price" Width="50"/>
+                    <DataGridTextColumn Binding="{Binding Quantity}" Header="Quantity" Width="60"/>
                 </DataGrid.Columns>
             </DataGrid>
 

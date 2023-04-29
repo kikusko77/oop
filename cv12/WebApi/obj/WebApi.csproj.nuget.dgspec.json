@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\source\\repos\\WebApi\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv12\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\source\\repos\\WebApi\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv12\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\source\\repos\\WebApi\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv12\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\Student\\source\\repos\\WebApi\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\source\\repos\\WebApi\\WebApi\\obj\\",
+        "projectPath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv12\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\marek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv12\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

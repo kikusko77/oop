@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharmacyApp.EFCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace PharmacyApp
         public MainWindow()
         {
             InitializeComponent();
+
+            Drugs[] DrugDatabase;
+            using (var context = new PharmacyDbContext())
+            {
+                DrugDatabase = context.getAllDrugs(context);
+            }
+
+            DatabaseView.Items.Add(DrugDatabase);
+            
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -49,15 +59,5 @@ namespace PharmacyApp
 
         }
     }
-
-    public class Drugs
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Brand { get; set; }
-        public string Manufacturer { get; set; }
-        public string Price { get; set; }
-        public string Quantity { get; set; }
-
-    }
 }
+
