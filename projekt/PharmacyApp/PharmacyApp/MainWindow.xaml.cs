@@ -24,8 +24,27 @@ namespace PharmacyApp
         {
             InitializeComponent();
         }
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Export_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Import_Click(object sender, RoutedEventArgs e)
         {
 
         }
