@@ -1,4 +1,5 @@
-﻿using PharmacyApp.EFCore;
+﻿using Microsoft.Win32;
+using PharmacyApp.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +29,19 @@ namespace PharmacyApp
             LoadDataGrid();
 
         }
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.Enter)
+            {
+                string searchTerm = SearchBox.Text;
 
+                using (var context = new PharmacyDbContext(this))
+                {
+                    var drugs = context.drugs.Where(d => d.Name.Contains(searchTerm)).ToList();
+                    DatabaseView.Items.Clear();
+                    DatabaseView.ItemsSource = drugs;
+                }
+            }
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -46,12 +57,43 @@ namespace PharmacyApp
 
         private void Export_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = "c:\\";
+                saveFileDialog1.Filter = "csv file (*.csv)|*.csv";
+                saveFileDialog1.ShowDialog();
+                string filePath = saveFileDialog1.FileName;
+                using (var context = new PharmacyDbContext(this))
+                {
+                    context.ExportToCsv(context, filePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Export error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
         }
 
         private void Import_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.InitialDirectory = "c:\\";
+                openFileDialog1.Filter = "csv file (*.csv)|*.csv";
+                openFileDialog1.ShowDialog();
+                string filePath = openFileDialog1.FileName; // Assign the value of openFileDialog1.FileName to filePath
+                using (var context = new PharmacyDbContext(this))
+                {
+                    context.ImportFromCsv(context, filePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Export error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public void LoadDataGrid()
@@ -69,6 +111,8 @@ namespace PharmacyApp
                 DatabaseView.Items.Add(drug);
             }
         }
+
+        
     }
 }
 
