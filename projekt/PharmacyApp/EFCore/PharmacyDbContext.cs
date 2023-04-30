@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using System.Globalization;
 using System.IO;
+using System.Windows;
 
 namespace PharmacyApp.EFCore
 {
@@ -56,6 +57,10 @@ namespace PharmacyApp.EFCore
                 context.drugs.Add(new Drugs() { Id = id, Name = name, Brand = brand, Manufacturer = manufacturer, Price = price, Quantity = quantity});
                 context.SaveChanges();
                 mainWindow.LoadDataGrid();
+            }
+            else
+            {
+                MessageBox.Show("Product with the same ID alredy exists.");
             }
         }
 

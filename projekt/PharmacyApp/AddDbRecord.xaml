@@ -21,8 +21,8 @@
         <TextBox Name="Name" Margin="0,30,0,0" Width="407" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox Name="Brand" Margin="0,50,0,0" Width="407" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox Name="Manufacturer" Margin="0,70,0,0" Width="347" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox Name="Quantity" Margin="0,90,0,0" Width="387" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox Name="Price" Margin="0,110,0,0" Width="416" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox Name="Quantity" GotFocus="Quantity_GotFocus" Margin="0,90,0,0" Width="387" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox Name="Price" GotFocus="Price_GotFocus" Margin="0,110,0,0" Width="416" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1"/>
 
         <Button Name="Confirm" Click="Confirm_Click" Content="OK" FontSize="20" Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,135,0,10"/>
         <Button Name="Cancel" Click="Cancel_Click" Content="Cancel" FontSize="20" Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,135,90,10"/>

@@ -24,6 +24,8 @@ namespace PharmacyApp
         public AddDbRecord()
         {
             InitializeComponent();
+            Price.Text = "0";
+            Quantity.Text = "0";
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
@@ -45,6 +47,7 @@ namespace PharmacyApp
             }
             catch (System.FormatException)
             {
+                MessageBox.Show("All parameters have to be set!");
                 Close();
                 return;
             }
@@ -65,6 +68,16 @@ namespace PharmacyApp
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Quantity_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Quantity.Text = string.Empty;
+        }
+
+        private void Price_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Price.Text = string.Empty;
         }
     }
 }
