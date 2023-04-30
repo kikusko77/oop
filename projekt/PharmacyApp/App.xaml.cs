@@ -1,4 +1,5 @@
-﻿using PharmacyApp.EFCore;
+﻿using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
+using PharmacyApp.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,6 +15,17 @@ namespace PharmacyApp
     /// </summary>
     public partial class App : Application
     {
-        
+        private readonly MainWindow mainWindow;
+
+        public App()
+        {
+            Startup += OnStartup;
+            mainWindow = new MainWindow();
+        }
+
+        private void OnStartup(object sender, StartupEventArgs e)
+        {
+            mainWindow.ShowDialog();
+        }
     }
 }

@@ -35,6 +35,15 @@ namespace PharmacyApp.EFCore
             });
         }
 
+
+
+        private readonly MainWindow mainWindow;
+
+        public PharmacyDbContext(MainWindow mainWindow)
+        {
+            this.mainWindow = mainWindow;
+        }
+
         public Drugs[] getAllDrugs(PharmacyDbContext context)
         {
             return context.drugs.ToArray();
@@ -45,6 +54,8 @@ namespace PharmacyApp.EFCore
             if (!context.drugs.Any(s => s.Id == id))
             {
                 context.drugs.Add(new Drugs() { Id = id, Name = name, Brand = brand, Manufacturer = manufacturer, Price = price, Quantity = quantity});
+                context.SaveChanges();
+                mainWindow.LoadDataGrid();
             }
         }
 
@@ -61,6 +72,7 @@ namespace PharmacyApp.EFCore
 
                 context.drugs.Update(drug);
                 context.SaveChanges();
+                mainWindow.LoadDataGrid();
             }
         }
         public void ImportFromCsv(PharmacyDbContext context, string filePath)
@@ -77,6 +89,7 @@ namespace PharmacyApp.EFCore
                     }
                 }
                 context.SaveChanges();
+                mainWindow.LoadDataGrid();
             }
         }
 

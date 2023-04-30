@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharmacyApp.EFCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,39 @@ namespace PharmacyApp
         public AddEditWindow()
         {
             InitializeComponent();
+        }
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            int id;
+            string name;
+            string brand;
+            string manufacturer;
+            decimal price;
+            int quantity;
+            try
+            {
+                id = int.Parse(Id.Text);
+                name = Name.Text;
+                brand = Brand.Text;
+                manufacturer = Manufacturer.Text;
+                price = decimal.Parse(Price.Text);
+                quantity = int.Parse(Quantity.Text);
+            } catch (System.FormatException) {            
+                Close();
+                return;
+            }
+
+            using (var context = new PharmacyDbContext((MainWindow)Application.Current.MainWindow))
+            {
+                context.addDrug(context, id, name, brand, manufacturer, price, quantity);             
+            }
+            Close();
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

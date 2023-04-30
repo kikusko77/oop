@@ -25,18 +25,8 @@ namespace PharmacyApp
         public MainWindow()
         {
             InitializeComponent();
+            LoadDataGrid();
 
-            Drugs[] DrugDatabase;
-            using (var context = new PharmacyDbContext())
-            {
-
-                DrugDatabase = context.getAllDrugs(context);
-            }
-
-            foreach (var drug in DrugDatabase)
-            {
-                DatabaseView.Items.Add(drug);
-            }
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -45,7 +35,8 @@ namespace PharmacyApp
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            AddEditWindow addEditWindow = new AddEditWindow();
+            addEditWindow.ShowDialog();
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -61,6 +52,22 @@ namespace PharmacyApp
         private void Import_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        public void LoadDataGrid()
+        {
+            Drugs[] DrugDatabase;
+            using (var context = new PharmacyDbContext((MainWindow)Application.Current.MainWindow))
+            {
+                DrugDatabase = context.getAllDrugs(context);
+            }
+
+            DatabaseView.Items.Clear();
+
+            foreach (var drug in DrugDatabase)
+            {
+                DatabaseView.Items.Add(drug);
+            }
         }
     }
 }

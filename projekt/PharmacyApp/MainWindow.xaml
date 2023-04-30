@@ -47,7 +47,7 @@
 
         </Grid>
 
-        <TextBox Name="SaerchBox"  Grid.Row="0" TextWrapping="Wrap" Text="Search" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Margin="110,0,0,0"/>
+        <TextBox Name="SearchBox"  Grid.Row="0" TextWrapping="Wrap" Text="Search" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Margin="110,0,0,0"/>
 
     </Grid>
 </Window>
