@@ -38,21 +38,29 @@ namespace PharmacyApp
                 using (var context = new PharmacyDbContext(this))
                 {
                     var drugs = context.drugs.Where(d => d.Name.Contains(searchTerm)).ToList();
+                    
                     DatabaseView.Items.Clear();
-                    DatabaseView.ItemsSource = drugs;
+
+                    foreach (var drug in drugs)
+                    {
+                        DatabaseView.Items.Add(drug);
+                    }
                 }
             }
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow addEditWindow = new AddEditWindow();
-            addEditWindow.ShowDialog();
+            AddDbRecord addDbRecord = new AddDbRecord();
+            addDbRecord.ShowDialog();
         }
 
-        private void Edit_Click(object sender, RoutedEventArgs e)
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            var row = (DataGridRow)sender;
+            var record = (Drugs)row.DataContext;
+            EditDbRecord editDbRecord = new EditDbRecord(record);
+            editDbRecord.ShowDialog();
         }
 
         private void Export_Click(object sender, RoutedEventArgs e)
@@ -112,7 +120,17 @@ namespace PharmacyApp
             }
         }
 
-        
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            SearchBox.Text = string.Empty;
+            SearchBox.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            SearchBox.Text = "Search";
+            SearchBox.Foreground = new SolidColorBrush(Colors.Gray);
+        }
     }
 }
 

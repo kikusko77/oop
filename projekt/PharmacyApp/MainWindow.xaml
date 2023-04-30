@@ -20,11 +20,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Name="Add" Click="Add_Click"  Grid.Row="1" Grid.Column="0" Content="Add" Width="90" Height="40" VerticalAlignment="Top" Margin="0,10,0,0"/>
-            <Button Name="Edit" Click="Edit_Click" Grid.Row="1" Content="Edit" Width="90" Height="40" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <Button Name="Export" Click="Export_Click" Grid.Row="1" Content="Export" Width="90" Height="40" VerticalAlignment="Top" Margin="0,110,0,0"/>
-            <Button Name="Import" Click="Import_Click" Grid.Row="1" Content="Import" Width="90" Height="40" VerticalAlignment="Top" Margin="0,160,0,0"/>
+            <Button Name="Export" Click="Export_Click" Grid.Row="1" Content="Export" Width="90" Height="40" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <Button Name="Import" Click="Import_Click" Grid.Row="1" Content="Import" Width="90" Height="40" VerticalAlignment="Top" Margin="0,110,0,0"/>
 
-            <DataGrid Name="DatabaseView" Grid.Column="1">
+            <DataGrid Name="DatabaseView" Grid.Column="1" IsReadOnly="True">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Background" Value="LightGray"/>
@@ -32,6 +31,9 @@
                         <Setter Property="BorderThickness" Value="0,0,1,2"/>
                         <Setter Property="BorderBrush" Value="Black"/>
                         <Setter Property="Padding" Value="5,0,0,0"/>
+                    </Style>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
                     </Style>
                 </DataGrid.Resources>
                 
@@ -47,7 +49,7 @@
 
         </Grid>
 
-        <TextBox Name="SearchBox"  Grid.Row="0" TextWrapping="Wrap" Text="Search" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Margin="110,0,0,0"  PreviewKeyDown="SearchBox_PreviewKeyDown"/>
+        <TextBox Name="SearchBox" GotFocus="SearchBox_GotFocus" LostFocus="SearchBox_LostFocus"  Grid.Row="0" TextWrapping="Wrap" Text="Search" Foreground="Gray" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Margin="110,0,0,0"  PreviewKeyDown="SearchBox_PreviewKeyDown"/>
 
     </Grid>
 </Window>
