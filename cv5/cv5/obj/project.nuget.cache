@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "Zz+lzTlKSK87xBqWhuIlj7NiC9BzYiC1xFCSFgRkbryoPK5FsINYo6W3JgOdrozZEXzPiWss7uqNZeQ8gN6prA==",
@@ -5,4 +6,13 @@
   "projectFilePath": "C:\\Users\\ChristianKu\\source\\repos\\cv5\\cv5\\cv5.csproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "qyg9277t2l9zbmfpKUueG9gW8dRcBcckH+f9a8K8lRD/VT3LtFL9q5LHQdM3P+VY0WXgpMqn2wkYYTPeq7N3jQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marek\\Documents\\C# projects\\oop\\cv5\\cv5\\cv5.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> 84489ebf86e044165eb0b646d0428de7c99a1740
 }

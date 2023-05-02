@@ -1,0 +1,2 @@
+﻿SELECT Skratka, COUNT(Id_studenta) AS Pocet, AVG(Hodnotenie) AS PrumerneHodnoceni,
+MAX(Hodnotenie) AS Nejhorsi,MIN(Hodnotenie) AS Nejlepsi  FROM Hodnotenie GROUP BY Skratka HAVING count(Id_studenta) > 1
